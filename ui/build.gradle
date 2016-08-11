@@ -1,0 +1,30 @@
+buildscript {
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
+    dependencies {
+        classpath("com.moowork.gradle:gradle-node-plugin:0.13")
+    }
+}
+
+apply plugin: 'com.moowork.node'
+apply plugin: 'base'
+version '0.0.1'
+
+node {
+    version = "4.4.7";
+    download = false;
+}
+
+task cleanDist(type: NpmTask){
+    args = ['run', 'clean']
+}
+
+task bundle(type: NpmTask){
+    args = ['run', 'build']
+}
+
+clean.dependsOn(cleanDist)
+bundle.dependsOn(npm_install)
+assemble.dependsOn(bundle)

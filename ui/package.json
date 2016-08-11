@@ -1,0 +1,51 @@
+{
+  "name": "todo-list-ui",
+  "version": "1.0.0",
+  "description": "Example project to play with spring-boot and react - build using gradle, npm and webpack",
+  "main": "./src/App.js",
+  "author": "Maciej Madej",
+  "readme": "../README.md",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmadej85/todo-list.git"
+  },
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "set NODE_ENV=production && webpack --progress --colors --config webpack.config.prod.js",
+    "start": "node server.js",
+    "lint": "eslint src"
+  },
+  "keywords": [
+    "react",
+    "reactjs",
+    "boilerplate",
+    "hot",
+    "reload",
+    "hmr",
+    "live",
+    "edit",
+    "webpack"
+  ],
+  "devDependencies": {
+    "babel-core": "^6.13.2",
+    "babel-eslint": "^6.1.2",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.13.2",
+    "babel-preset-react": "^6.11.1",
+    "babel-preset-stage-0": "^6.5.0",
+    "eslint": "^3.2.2",
+    "eslint-plugin-babel": "^3.3.0",
+    "eslint-plugin-react": "^6.0.0",
+    "jquery": "^3.1.0",
+    "rimraf": "^2.5.4",
+    "react-hot-loader": "^1.3.0",
+    "webpack":"1.13.1",
+    "webpack-dev-server": "^1.14.1"
+  },
+
+  "dependencies": {
+    "react" : "^15.3.0",
+    "react-dom" : "^15.3.0"
+  }
+}
