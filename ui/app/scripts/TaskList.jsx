@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-var $ = require('jquery');
 
 export default class TaskList extends Component {
 	constructor(props) {

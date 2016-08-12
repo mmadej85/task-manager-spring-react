@@ -1,10 +1,11 @@
 buildscript {
+
     repositories {
         jcenter()
         mavenCentral()
     }
     dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.4.0.RELEASE")
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
     }
 }
 
@@ -18,7 +19,7 @@ jar.version = '0.1.0'
 jar.dependsOn('ui:build')
 
 jar.from('ui/dist') { into 'static/js' }
-jar.from('ui/index.html') { into 'static' }
+jar.from('ui/app/index.html') { into 'static' }
 
 repositories {
     mavenCentral()
@@ -30,10 +31,10 @@ sourceCompatibility = JavaVersion.VERSION_1_8
 targetCompatibility = JavaVersion.VERSION_1_8
 
 dependencies {
-    compile("org.springframework.boot:spring-boot-devtools")
-    compile("org.springframework.boot:spring-boot-starter-web")
-    compile("org.springframework.boot:spring-boot-starter-actuator")
-    testCompile("junit:junit")
+    compile("org.springframework.boot:spring-boot-devtools:${springBootVersion}")
+    compile("org.springframework.boot:spring-boot-starter-web:${springBootVersion}")
+    compile("org.springframework.boot:spring-boot-starter-actuator:${springBootVersion}")
+    testCompile("junit:junit:4.12")
 }
 
 task wrapper(type: Wrapper) {
