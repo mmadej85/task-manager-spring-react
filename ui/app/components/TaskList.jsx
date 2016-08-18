@@ -1,5 +1,7 @@
 import React, {Component} from "react";
 import Task from "./Task.jsx";
+import {CONFIG} from "../constants/constants"
+import {getAllTasks} from "../core/task-server"
 
 export default class TaskList extends Component {
 	constructor(props) {
@@ -9,15 +11,9 @@ export default class TaskList extends Component {
 		}
 	};
 
-	retrieveTasksFromServer(){
-		$.get('api/tasks/', (result) => {
-			this.setState({tasks: result})
-		});
-	}
-
 	componentDidMount() {
-		this.retrieveTasksFromServer();
-		setInterval(this.retrieveTasksFromServer, 2000)
+		getAllTasks((result) => {this.setState({tasks: result})});
+		setInterval(getAllTasks, CONFIG.defaultFetchInterval)
 	}
 
 	render() {

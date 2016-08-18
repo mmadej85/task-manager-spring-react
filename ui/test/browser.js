@@ -1,1 +1,1 @@
-require('mocha-jsdom')()
+require('mocha-jsdom')();

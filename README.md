@@ -3,33 +3,36 @@ TODO List Web App
 
 Example project to play with spring-boot and react (with the help of gradle, npm and webpack)
 
-### Dependencies
+### Dependencies / Libs
 
-* Spring Boot
-* React
-* Webpack
-* [webpack-dev-server](https://github.com/webpack/webpack-dev-server)
-* [babel-loader](https://github.com/babel/babel-loader)
-* [react-hot-loader](https://github.com/gaearon/react-hot-loader)
+* **Language**: Java 8 / Javascript (ECMA6, JSX syntax)
+* **Main App Libs**: Java: Spring (Spring Boot, MVC), React
+* **Build Tools**: Gradle, npm, webpack, babel, eslint
+* **JavaScript Testing**: Mocha, Chai, Enzyme, Sinon
+
 
 ### Usage
-Building the executable jar:
+Building the executable jar (**server + ui**):
 ```
 gradle build
 ```
-Running the jar:
+Running the jar (**server + ui**):
 ```
-java -jar todo-list-x.x.x.jar
+java -jar build\libs\todo-list-x.x.x.jar
 ```
-Running server in development:
+Running **server** in development:
 ```
 gradle bootRun
 ```
-Running ui in development:
+Running **ui** in development (from ui directory):
 ```
 npm start
 ```
-Runnig ESLint check:
+Runnig ESLint check (from ui directory):
 ```
 npm run lint
+```
+Running js mocha unit test (from ui directory)
+```
+npm run test
 ```
