@@ -1,4 +1,4 @@
-TODO List Web App
+TODO List Web App (Spring Boot + React)
 =======================
 
 Example project to play with spring-boot and react (with the help of gradle, npm and webpack)
