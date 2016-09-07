@@ -1,8 +1,14 @@
-import React, {Component} from 'react';
+import React, {Component} from "react";
 
 export default class Task extends Component {
 
 	render() {
-		return <div className="task">{this.props.task.content}</div>
+		return <a href="#" className="list-group-item clearfix">{this.props.task.subject}
+			<span className="pull-right">
+				<button className="btn btn-xs btn-warning" onClick={() => this.props.onTaskDelete(this.props.task)}>
+					<span className="glyphicon glyphicon-trash"></span>
+				</button>
+			</span>
+		</a>
 	}
 }

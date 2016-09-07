@@ -1,21 +1,44 @@
 package pl.mmadej.todolist.domain;
 
-import java.util.UUID;
+import lombok.Builder;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NonNull;
+import lombok.Setter;
+import lombok.ToString;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
 
+@EqualsAndHashCode(exclude = {"id"})
+@Builder
+@ToString
 public class Task {
+
+	@Id
+	@Getter
+	@Setter
 	private String id;
+
+	@Indexed(unique = true)
+	@Getter
+	@Setter
+	private String subject;
+
+	@Getter
+	@Setter
 	private String content;
 
-	public Task(String content) {
-		this.id = UUID.randomUUID().toString();
+	public Task() {
+	}
+
+	public Task(@NonNull String subject, @NonNull String content) {
 		this.content = content;
+		this.subject = subject;
 	}
 
-	public String getContent() {
-		return content;
-	}
-
-	public String getId() {
-		return id;
+	public Task(String id, @NonNull String subject, @NonNull String content) {
+		this.id = id;
+		this.content = content;
+		this.subject = subject;
 	}
 }

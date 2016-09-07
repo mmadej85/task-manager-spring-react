@@ -1,0 +1,2 @@
+--compilers js:babel-register
+--recursive test/browser.js test/**/*test.js

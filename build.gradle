@@ -30,13 +30,42 @@ bootRun.addResources = true
 sourceCompatibility = JavaVersion.VERSION_1_8
 targetCompatibility = JavaVersion.VERSION_1_8
 
+sourceSets {
+    integrationTest {
+        java {
+            compileClasspath += main.output + test.output
+            runtimeClasspath += main.output + test.output
+            srcDir file('src/integration-test/java')
+        }
+        resources.srcDir file('src/integration-test/resources')
+    }
+}
+
+configurations {
+    integrationTestCompile.extendsFrom testCompile
+    integrationTestRuntime.extendsFrom testRuntime
+}
+
 dependencies {
     compile("org.springframework.boot:spring-boot-devtools:${springBootVersion}")
     compile("org.springframework.boot:spring-boot-starter-web:${springBootVersion}")
     compile("org.springframework.boot:spring-boot-starter-actuator:${springBootVersion}")
-    testCompile("junit:junit:4.12")
+    compile("org.springframework.boot:spring-boot-starter-data-mongodb:${springBootVersion}")
+    compile("org.projectlombok:lombok:1.16.10")
+    compile("com.google.guava:guava:19.0")
+    testCompile("org.springframework.boot:spring-boot-starter-test:${springBootVersion}")
+    integrationTestCompile("de.flapdoodle.embed:de.flapdoodle.embed.mongo:1.50.5")
 }
 
+task integrationTest(type: Test) {
+    group 'Verification'
+    description 'Runs the integration tests.'
+    testClassesDir = sourceSets.integrationTest.output.classesDir
+    classpath = sourceSets.integrationTest.runtimeClasspath
+    systemProperties['jar.path'] = jar.archivePath
+}
+
+check.dependsOn integrationTest
 task wrapper(type: Wrapper) {
     gradleVersion = '2.14.1'
 }

@@ -6,10 +6,10 @@ import Task from '../../app/components/Task';
 var jsdom = require('mocha-jsdom')
 
 describe('<Task/>', function() {
-	it('shows content within div tag', () => {
-		const task = {'content' : 'first task'};
-		expect(shallow(<Task task={task}/>).equals(<div className='task'>first task</div>)).to.equal(true)
+	it('shows subject without content', () => {
+		const taskJson = {'subject' : 'first task', 'content': 'sample content'};
+		const task = shallow(<Task task={taskJson}/>);
+		expect(task.contains('first task')).to.equal(true);
+		expect(task.contains('sample content')).to.equal(false)
 	});
-
-
 });

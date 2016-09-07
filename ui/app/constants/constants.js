@@ -1,3 +1,4 @@
 export const CONFIG = {
-	defaultFetchInterval: 2000
+	pollInterval: 3000,
+	urlTasks: 'api/tasks'
 };
