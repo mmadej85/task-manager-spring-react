@@ -21,35 +21,35 @@ gradle build
 ```
 java -jar build\libs\todo-list-x.x.x.jar
 ```
-3. Running **server** in development:
+4. Running **server** in development:
 ```
 gradle bootRun
 ```
-4. Invoking server integraiton tests:
+5. Invoking server integraiton tests:
 ```
 gradle integrationTest
 ```
-4. Running **ui** in development:
+6. Running **ui** in development:
 ```
 cd ui
 npm start
 ```
-5. Runnig ESLint check:
+7. Runnig ESLint check:
 ```
 cd ui
 npm run lint
 ```
-6. Running js mocha unit test:
+8. Running js mocha unit test:
 ```
 cd ui
 npm test
 ```
-7. Setup selenium for e2e tests:
+9. Setup selenium for e2e tests:
 ```
 cd ui
 npm run e2e-setup
 ```
-8. Running e2e tests using nightwatch.js (assuming that ui is run as per point 4 and seleniu setup is done as per point 7):
+10. Running e2e tests using nightwatch.js (assuming that ui is run as per point 6 and selenium setup is done as per point 9):
 ```
 cd ui
 npm run e2e
