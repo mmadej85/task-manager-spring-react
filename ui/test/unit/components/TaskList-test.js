@@ -1,8 +1,8 @@
-import React from "react";
-import {expect} from "chai";
-import {shallow} from "enzyme";
-import Task from "../../app/components/Task";
-import TaskList from "../../app/components/TaskList";
+import React from 'react';
+import {expect} from 'chai';
+import {shallow} from 'enzyme';
+import Task from '../../../app/components/Task';
+import TaskList from '../../../app/components/TaskList';
 
 describe('<TaskList/>', function () {
 

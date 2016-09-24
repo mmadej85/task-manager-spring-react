@@ -1,8 +1,8 @@
 import {stub} from 'sinon';
-import React from "react";
-import {expect} from "chai";
-import {shallow, mount} from "enzyme";
-import TaskForm from "../../app/components/TaskForm";
+import React from 'react';
+import {expect} from 'chai';
+import {shallow, mount} from 'enzyme';
+import TaskForm from '../../../app/components/TaskForm';
 
 describe('<TaskForm/>', function () {
 

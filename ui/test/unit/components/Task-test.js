@@ -1,9 +1,9 @@
 import React from 'react';
 import {expect} from 'chai';
 import {shallow} from 'enzyme';
-import Task from '../../app/components/Task';
+import Task from '../../../app/components/Task';
 
-var jsdom = require('mocha-jsdom')
+var jsdom = require('mocha-jsdom');
 
 describe('<Task/>', function() {
 	it('shows subject without content', () => {

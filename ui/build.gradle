@@ -13,18 +13,11 @@ apply plugin: 'base'
 version '0.0.1'
 
 node {
-    version = "4.4.7";
+    version = "4.5";
     download = false;
 }
 
-task cleanDist(type: NpmTask){
-    args = ['run', 'clean']
-}
-
-task bundle(type: NpmTask){
-    args = ['run', 'build']
-}
-
-clean.dependsOn(cleanDist)
-bundle.dependsOn(npm_install)
-assemble.dependsOn(bundle)
+clean.dependsOn(npm_run_clean)
+npm_test.dependsOn(npm_run_lint)
+npm_run_build.dependsOn(npm_test)
+assemble.dependsOn(npm_run_build)
