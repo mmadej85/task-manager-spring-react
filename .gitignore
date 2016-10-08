@@ -11,3 +11,4 @@ build
 *.iml
 *.ipr
 *.iws
+*.log

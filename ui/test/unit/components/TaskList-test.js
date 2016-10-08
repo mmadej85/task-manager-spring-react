@@ -11,6 +11,4 @@ describe('<TaskList/>', function () {
 		const taskList = shallow(<TaskList tasks={tasksJson}/>);
 		expect(taskList.find(Task)).to.have.length(2);
 	});
-
-
 });

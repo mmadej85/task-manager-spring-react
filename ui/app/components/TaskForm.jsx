@@ -22,10 +22,16 @@ export default class TaskForm extends Component {
 	};
 
 	render() {
-		return <form className="taskForm" onSubmit={this.handleSubmit.bind(this)}>
-			<h3>Add New Task</h3>
-			<input type="content" placeholder="Task subject" value={this.state.subject} onChange={this.handleContentChange.bind(this)}/>
-			<input type="submit" value="Add" className="btn"/>
-		</form>
+		return <div className="panel panel-default">
+			<div className="panel-heading">
+				<h3 className="panel-title">Add New Task</h3>
+			</div>
+			<div className="panel-body">
+				<form className="taskForm" onSubmit={this.handleSubmit.bind(this)}>
+					<input type="content" placeholder="Task subject" value={this.state.subject} onChange={this.handleContentChange.bind(this)}/>
+					<input type="submit" value="Add" className="btn"/>
+				</form>
+			</div>
+		</div>
 	}
 }
