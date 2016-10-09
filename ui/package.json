@@ -17,7 +17,7 @@
     "e2e-setup": "selenium-standalone install --version=2.53.1 --drivers.chrome.version=2.24",
     "e2e": "nightwatch --test test/e2e/taskListTest.js",
     "start": "webpack-dev-server --colors --config webpack.config.dev.js",
-    "build": "set NODE_ENV=production && webpack --progress --colors --config webpack.config.prod.js"
+    "assemble": "set NODE_ENV=production && webpack --progress --colors --config webpack.config.prod.js"
   },
   "keywords": [
     "react",

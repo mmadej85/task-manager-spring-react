@@ -17,7 +17,7 @@ node {
     download = false;
 }
 
-clean.dependsOn(npm_run_clean)
-npm_test.dependsOn(npm_run_lint)
-npm_run_build.dependsOn(npm_test)
-assemble.dependsOn(npm_run_build)
+clean.dependsOn npm_run_clean
+npm_test.dependsOn npm_run_lint
+check.dependsOn npm_test
+assemble.dependsOn npm_run_assemble

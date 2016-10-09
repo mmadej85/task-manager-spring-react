@@ -12,7 +12,7 @@ Example project to play with spring-boot and react:
 * **UI Testing**: Nightwatch.js
 
 ### Dev Environment
-1. General: windows 7 64bit, jdk 1.8, node v4.5.0, npm 2.15.9, gradle 2.14
+1. General: windows 7 64bit, jdk 1.8, node v4.5.0, npm 2.15.9, gradle 2.14.1 (gradle wrapper available)
 2. Nightwatch tests: firefox 47.0.1
     * [firefox 48 introduces security enhancements causing tests to fail](https://github.com/SeleniumHQ/selenium/issues/2559)
 3. Mongo DB version v3.2.9

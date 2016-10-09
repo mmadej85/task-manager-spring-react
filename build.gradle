@@ -16,7 +16,7 @@ apply plugin: 'idea'
 jar.baseName = 'todo-list'
 jar.version = '1.0.0'
 
-jar.dependsOn('ui:build')
+jar.dependsOn('ui:assemble')
 
 jar.from('ui/dist') { into 'static/js' }
 jar.from('ui/app/index.html') { into 'static' }
