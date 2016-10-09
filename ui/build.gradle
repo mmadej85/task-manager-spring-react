@@ -13,8 +13,9 @@ apply plugin: 'base'
 version '0.0.1'
 
 node {
-    version = "4.5";
-    download = false;
+    version = "4.5.0";
+    npmVersion = '2.15.9';
+    download = true;
 }
 
 clean.dependsOn npm_run_clean
