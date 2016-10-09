@@ -41,11 +41,11 @@ Example project to play with spring-boot and react:
 ```
 gradle build
 ```
-(2) Running the jar (**server + ui**, application available on localhost:8080):
+(2) Running the jar (**server + ui**):
 ```
 java -jar build\libs\todo-list-1.0.0.jar
 ```
-(3) Running **server** in development (server apli available on localhost:8080):
+(3) Running **server** in development:
 ```
 gradle bootRun
 ```
