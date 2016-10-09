@@ -14,7 +14,7 @@ apply plugin: 'spring-boot'
 apply plugin: 'idea'
 
 jar.baseName = 'todo-list'
-jar.version = '0.1.0'
+jar.version = '1.0.0'
 
 jar.dependsOn('ui:build')
 

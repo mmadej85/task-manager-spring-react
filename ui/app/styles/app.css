@@ -1,11 +1,11 @@
 .just-padding {
-    padding: 15px;
+	padding: 15px;
 }
 
 .list-group.list-group-root .list-group {
-    margin-bottom: 0;
+	margin-bottom: 0;
 }
 
 .list-group.list-group-root .list-group > .list-group-item {
-    padding-left: 30px;
+	padding-left: 30px;
 }

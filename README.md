@@ -23,16 +23,29 @@ Example project to play with spring-boot and react:
 2. For application to work properly start mongodb on **localhost:27017**
     * If you are running mondgo on different host/port please update **application.properties**
 
+### Configuration
+1. Default app port: **8080**
+2. Default server host:port: **8080**
+3. Default ui port: **3000**
+4. *\main\resources\application.properties*:
+
+| Property | Description | Default |
+| --- | --- | --- |
+| spring.profiles.active | Active spring profiles | production |
+| spring.data.mongodb.host | Mongo DB host | localhost |
+| spring.data.mongodb.port | Mongo DB port | 27017 |
+| todolist.dbname | Application dbname within Mongo DB | tasks |
+
 ### Usage
 (1) Building the executable jar (**server + ui**) (and also run all unit tests and server integration tests):
 ```
 gradle build
 ```
-(2) Running the jar (**server + ui**):
+(2) Running the jar (**server + ui**, application available on localhost:8080):
 ```
-java -jar build\libs\todo-list-x.x.x.jar
+java -jar build\libs\todo-list-1.0.0.jar
 ```
-(3) Running **server** in development:
+(3) Running **server** in development (server apli available on localhost:8080):
 ```
 gradle bootRun
 ```
