@@ -1,4 +1,4 @@
-TODO List Web App (Spring Boot + React) [![Build Status](https://travis-ci.org/mmadej85/todo-list.svg?branch=master)](https://travis-ci.org/mmadej85/todo-list)
+Task Manager App (Spring Boot + React) [![Build Status](https://travis-ci.org/mmadej85/todo-list.svg?branch=master)](https://travis-ci.org/mmadej85/todo-list)
 =======================
 
 Example project to play with spring-boot and react:
